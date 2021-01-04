@@ -1,11 +1,5 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Jun 13 12:25:28 2020
-
-@author: ACER
-"""
-
 # coding:utf-8 
+
 from PyQt5 import QtCore,QtGui,QtWidgets 
 import sys 
 import qtawesome
@@ -1342,7 +1336,7 @@ class MainUi(QtWidgets.QMainWindow):
                 # print("win")
                 if flag == 1:
                     # print("sta: ", start_time)
-                    usertime = time.time() - start_time   #计算用时
+                    usertime = time.time() - start_time   #計算時間
                     print("win: ", win, start_time)
                     flag = 0
                 restart = draw_win_screen(mouse)
@@ -1433,9 +1427,7 @@ class MainUi(QtWidgets.QMainWindow):
         self.left_button_8.setObjectName('left_button')
         self.left_button_8.clicked.connect(open_lb8)
         
-        ##self.left_button_9 = QtWidgets.QPushButton(qtawesome.icon('fa.question',color='white'),"遇到问题")
-        ##self.left_button_9.setObjectName('left_button')
-        
+
         self.left_xxx = QtWidgets.QPushButton(" ")
 
 
@@ -1458,8 +1450,8 @@ class MainUi(QtWidgets.QMainWindow):
         
 ################################################右欄功能#################################################################3
         
-        self.right_bar_widget = QtWidgets.QWidget() # 右侧顶部搜索框部件
-        self.right_bar_layout = QtWidgets.QGridLayout() # 右侧顶部搜索框网格布局
+        self.right_bar_widget = QtWidgets.QWidget() # 右側頂部搜尋框
+        self.right_bar_layout = QtWidgets.QGridLayout() # 右側頂搜尋框
         self.right_bar_widget.setLayout(self.right_bar_layout)
         #self.search_icon = QtWidgets.QLabel(chr(0xf002) + ' '+'搜尋下載圖片 ')
         #self.search_icon.setFont(qtawesome.font('fa', 16))
@@ -1526,8 +1518,8 @@ class MainUi(QtWidgets.QMainWindow):
         self.right_playlist_lable.setObjectName('right_lable')        
         self.right_playlist_lable.clicked.connect(self.spyder)
          
-        self.right_newsong_widget = QtWidgets.QWidget() # 最新歌曲部件
-        self.right_newsong_layout = QtWidgets.QGridLayout() # 最新歌曲部件网格布局
+        self.right_newsong_widget = QtWidgets.QWidget() 
+        self.right_newsong_layout = QtWidgets.QGridLayout() 
         self.right_newsong_widget.setLayout(self.right_newsong_layout)
          
 ###########################################公告欄連接部分#####################################################
@@ -1636,8 +1628,8 @@ class MainUi(QtWidgets.QMainWindow):
         self.right_newsong_layout.addWidget(self.newsong_button_4, 3, 1, )
         self.right_newsong_layout.addWidget(self.newsong_button_5, 4, 1, )
         self.right_newsong_layout.addWidget(self.newsong_button_6, 5, 1, )
-        self.right_playlist_widget = QtWidgets.QWidget() # 播放歌单部件
-        self.right_playlist_layout = QtWidgets.QGridLayout() # 播放歌单网格布局
+        self.right_playlist_widget = QtWidgets.QWidget() 
+        self.right_playlist_layout = QtWidgets.QGridLayout() 
         self.right_playlist_widget.setLayout(self.right_playlist_layout)
         
 ########################################右側自訂按紐####################################   
@@ -1753,9 +1745,8 @@ class MainUi(QtWidgets.QMainWindow):
             border:none;
           }
         ''')
-        self.setWindowOpacity(0.9) # 设置窗口透明度
-        self.setAttribute(QtCore.Qt.WA_TranslucentBackground) # 设置窗口背景透明
-       #self.setWindowFlag(QtCore.Qt.FramelessWindowHint) # 隐藏边框
+        self.setWindowOpacity(0.9) # 設置窗口透明度
+        self.setAttribute(QtCore.Qt.WA_TranslucentBackground) 
        
       
         self.main_layout.setSpacing(0)
